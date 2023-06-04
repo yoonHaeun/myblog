@@ -8,9 +8,20 @@
 <table>
     <tbody th:each="company: ${companyList}">
     <tr>
-<!--        <th th:text="${company.id}"></th>-->
-<!--        <th th:text="${company.tenants}"></th>-->
-        <th th:text="${text}"></th>
+        <th>회사ID</th>
+        <th>회사명</th>
+        <th>임차인ID</th>
+        <th>호실</th>
+        <th>임대시작일</th>
+        <th>임대종료일</th>
+    </tr>
+    <tr th:each="tenant:${company.tenants}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.companyName}"></td>
+        <td th:text="${tenant.id}"></td>
+        <td th:text="${tenant.roomNum}"></td>
+        <td th:text="${tenant.contractAt}"></td>
+        <td th:text="${tenant.terminationAt}"></td>
     </tr>
     </tbody>
 </table>
