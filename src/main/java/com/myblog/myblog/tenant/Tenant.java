@@ -1,10 +1,10 @@
 package com.myblog.myblog.tenant;
 
+import com.myblog.myblog.company.Company;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -13,8 +13,9 @@ import java.time.LocalDate;
 @Entity
 @Getter @Setter @EqualsAndHashCode(of = "id")
 @Builder @AllArgsConstructor @NoArgsConstructor
-public class Tenant {
+public class Tenant implements Serializable {
 
+    private static final long serialVersionUID = 3085808150647711375L;
     @Id
     @GeneratedValue
     private Long id;
@@ -22,6 +23,9 @@ public class Tenant {
 
     private LocalDate contractAt; // 계약 시작시점
     private LocalDate terminationAt; // 계약 종료시점
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Company company;
 
 
 }

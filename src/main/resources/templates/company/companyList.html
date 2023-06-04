@@ -5,16 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    <table>
-        <tbody th:each="company: ${companyList}">
-        <tr>
-            <th th:text="${company.id}"></th>
-            <th th:text="${company.tenants}"></th>
-        </tr>
-        </tbody>
-
-    </table>
-
+<table>
+    <tbody th:each="company: ${companyList}">
+    <tr>
+<!--        <th th:text="${company.id}"></th>-->
+<!--        <th th:text="${company.tenants}"></th>-->
+        <th th:text="${text}"></th>
+    </tr>
+    </tbody>
+</table>
 <a href="/">홈으로</a>
 </body>
 </html>
