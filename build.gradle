@@ -73,3 +73,6 @@ compileQuerydsl {
 jar {
 	enabled = false
 }
+bootJar {
+    enabled = false
+}
