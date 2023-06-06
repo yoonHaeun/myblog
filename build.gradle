@@ -7,6 +7,7 @@ buildscript {
 
 plugins {
 	id 'java'
+	id 'application'
 	id 'org.springframework.boot' version '2.7.12'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	//추가
@@ -51,7 +52,10 @@ tasks.named('test') {
 
 
 //추가
-
+application {
+	// ...
+	mainClassName = 'com.myblog.myblog.App'
+}
 
 def querydslDir = "$buildDir/generated/querydsl"
 querydsl {
@@ -70,9 +74,19 @@ configurations {
 compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
 }
-jar {
-	enabled = false
-}
+//jar {
+//	enabled = false
+//}
 bootJar {
-    enabled = false
+	mainClassName = 'com.myblog.myblog.App'
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
+//jar {
+//	manifest {
+//		attributes 'Main-Class': 'com.myblog.myblog.App'
+//	}
+//	from(sourceSets.main.output)
+//	dependsOn configurations.runtimeClasspath
+//	from { configurations.runtimeClasspath.get().filter { it.name.endsWith('jar') }.map { zipTree(it) } }
+//	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+//}
