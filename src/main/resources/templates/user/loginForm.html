@@ -7,12 +7,12 @@
 </head>
 <body>
 <h3 class="gothic">로그인</h3>
-<form method="post" action="/login">
-    <label class="gothic" for="name">ID:</label>
-    <input class="nanum" type="text" id="name" name="name" required/>
+<form method="post" th:action="@{'/login'}" th:object="${member}">
+    <label class="gothic" for="id">ID:</label>
+    <input class="nanum" type="text" id="id" name="id" th:value="${member.id}" th:field="*{id}" required/>
     <br>
     <label class="gothic" for="password">PW:</label>
-    <input class="nanum" type="password" id="password" name="password" required/>
+    <input class="nanum" type="password" id="password" name="password" th:value="${member.password}" th:field="*{password}"required/>
     <br>
     <input class="nanum" type="submit" value="로그인"/>
 </form>

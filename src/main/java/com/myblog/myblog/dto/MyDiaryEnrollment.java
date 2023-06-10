@@ -1,6 +1,5 @@
 package com.myblog.myblog.dto;
 
-import com.myblog.myblog.users.Users;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,8 +14,8 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DiaryEnrollment {
-    @NotNull Long usersId;
+public class MyDiaryEnrollment {
+    @NotNull Long memberId;
 
     @NotNull String title;
     @NotNull String context;

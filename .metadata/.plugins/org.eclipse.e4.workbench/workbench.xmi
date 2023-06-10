@@ -2621,7 +2621,7 @@
   <commands xmi:id="_oz1WgAN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.wst.xsd.ui.refactor.makeElementGlobal" commandName="Make Local Element &amp;Global" description="Promotes local element to global level and replaces its references" category="_ozszgAN_Ee6qB4Nw5Iyflw"/>
   <commands xmi:id="_oz1WgQN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.jdt.ui.correction.encapsulateField.assist" commandName="Quick Assist - Create getter/setter for field" description="Invokes quick assist and selects 'Create getter/setter for field'" category="_oztatQN_Ee6qB4Nw5Iyflw"/>
   <commands xmi:id="_oz1WggN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.oomph.setup.editor.openEditorDropdown" commandName="Open Setup Editor" category="_oztaogN_Ee6qB4Nw5Iyflw"/>
-  <commands xmi:id="_oz1WgwN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning users" category="_oztaqwN_Ee6qB4Nw5Iyflw"/>
+  <commands xmi:id="_oz1WgwN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning member" category="_oztaqwN_Ee6qB4Nw5Iyflw"/>
   <commands xmi:id="_oz1WhAN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.egit.ui.team.ReplaceWithPrevious" commandName="Replace with Previous Revision" category="_oztarwN_Ee6qB4Nw5Iyflw"/>
   <commands xmi:id="_oz1WhQN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.m2e.sourcelookup.ui.openPom" commandName="Open Pom" category="_oztamwN_Ee6qB4Nw5Iyflw"/>
   <commands xmi:id="_oz1WhgN_Ee6qB4Nw5Iyflw" elementId="org.eclipse.oomph.setup.ui.questionnaire" commandName="Configuration Questionnaire" description="Review the IDE&amp;apos;s most fiercely contested preferences" category="_oztaogN_Ee6qB4Nw5Iyflw"/>

@@ -6,22 +6,15 @@
 </head>
 <body>
 <table>
-    <tbody th:each="user: ${userList}">
+    <tbody th:each="user: ${buildingList}">
     <tr>
-        <th>회사ID</th>
-        <th>회사명</th>
-        <th>임차인ID</th>
-        <th>호실</th>
-        <th>임대시작일</th>
-        <th>임대종료일</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>날짜</th>
     </tr>
-    <tr th:each="tenant:${user.tenants}">
-        <td th:text="${user.id}"></td>
-        <td th:text="${user.companyName}"></td>
-        <td th:text="${tenant.id}"></td>
-        <td th:text="${tenant.roomNum}"></td>
-        <td th:text="${tenant.contractAt}"></td>
-        <td th:text="${tenant.terminationAt}"></td>
+    <tr th:each="tenant:${user.diTitle}">
+        <td th:text="${user.diContext}"></td>
+        <td th:text="${user.diDate}"></td>
     </tr>
     </tbody>
 </table>

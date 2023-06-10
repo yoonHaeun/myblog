@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog | 정보수정</title>
+</head>
+<body>
+<h3 class="gothic">정보 수정</h3>
+<form method="post" th:action="@{'/member-update/'}" th:object="${member}">
+  <label class="gothic" for="id">ID:</label>
+  <input class="nanum" type="text" id="id" name="id" th:value="${member.id}" th:field="*{id}"readonly/>
+  <br>
+  <label class="gothic" for="password">PW:</label>
+  <input class="nanum" type="password" id="password" name="password" th:value="${member.password}" th:field="*{password}"required/>
+  <br>
+  <input class="nanum" type="submit" value="정보수정"/>
+</form>
+<br>
+<a class="gothic", href="/member/{id}">◂뒤로가기</a>
+</body>
+</html>

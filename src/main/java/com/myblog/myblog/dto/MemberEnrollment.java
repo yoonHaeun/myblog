@@ -13,8 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsersEnrollment {
-    @NotNull Long id;
-    @NotNull String name;
+public class MemberEnrollment {
+    @NotNull String id;
     @NotNull String password;
 }

@@ -10,16 +10,16 @@
     <tbody>
     <tr>
         <th>ID</th>
-        <th>Name</th>
         <th>Password</th>
     </tr>
     <tr>
-        <td th:text="${user.id}"></td>
-        <td th:text="${user.name}"></td>
-        <td th:text="${user.password}"></td>
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.password}"></td>
     </tr>
     </tbody>
 </table>
-<a href="/">◂홈으로</a>
+<a th:href="@{'/member-update'+${member.id}}">◂정보수정</a>
+<a href="/">◂로그아웃</a>
+<a th:href="@{'/'+${member.id}}">◂뒤로가기</a>
 </body>
 </html>
