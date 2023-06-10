@@ -6,7 +6,7 @@
 </head>
 <body>
 <table>
-    <tbody th:each="company: ${companyList}">
+    <tbody th:each="user: ${userList}">
     <tr>
         <th>회사ID</th>
         <th>회사명</th>
@@ -15,9 +15,9 @@
         <th>임대시작일</th>
         <th>임대종료일</th>
     </tr>
-    <tr th:each="tenant:${company.tenants}">
-        <td th:text="${company.id}"></td>
-        <td th:text="${company.companyName}"></td>
+    <tr th:each="tenant:${user.tenants}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.companyName}"></td>
         <td th:text="${tenant.id}"></td>
         <td th:text="${tenant.roomNum}"></td>
         <td th:text="${tenant.contractAt}"></td>

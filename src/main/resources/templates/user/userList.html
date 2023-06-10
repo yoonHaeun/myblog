@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css?ver=1" />
+    <title>MyBlog | 마이페이지</title>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Password</th>
+    </tr>
+    <tr>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.password}"></td>
+    </tr>
+    </tbody>
+</table>
+<a href="/">◂홈으로</a>
+</body>
+</html>

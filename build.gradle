@@ -39,9 +39,8 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	//추가
-//	implementation 'com.querydsl:querydsl-jpa'
-//	implementation 'mysql:mysql-connector-java'
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 }
@@ -74,19 +73,7 @@ configurations {
 compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
 }
-//jar {
-//	enabled = false
-//}
 bootJar {
 	mainClassName = 'com.myblog.myblog.App'
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
-//jar {
-//	manifest {
-//		attributes 'Main-Class': 'com.myblog.myblog.App'
-//	}
-//	from(sourceSets.main.output)
-//	dependsOn configurations.runtimeClasspath
-//	from { configurations.runtimeClasspath.get().filter { it.name.endsWith('jar') }.map { zipTree(it) } }
-//	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-//}
