@@ -2,22 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="/style.css?ver=1" />
+    <title>MyBlog | 회원가입</title>
 </head>
 <body>
-<table>
-    <tbody th:each="user: ${buildingList}">
+<h3 class="gothic">일기</h3>
+<br>
+<table style="width: 500px">
+    <tbody>
     <tr>
-        <th>제목</th>
-        <th>내용</th>
-        <th>날짜</th>
+        <th style="width: 30%" class="gothic">제목</th>
+        <th style="width: 40%" class="gothic">내용</th>
+        <th style="width: 30%" class="gothic">날짜</th>
     </tr>
-    <tr th:each="tenant:${user.diTitle}">
-        <td th:text="${user.diContext}"></td>
-        <td th:text="${user.diDate}"></td>
+    <tr th:each="diary: ${diary}">
+        <td class="gothic" th:text="${diary.diTitle}"></td>
+        <td class="gothic" th:text="${diary.diContext}"></td>
+        <td class="gothic" th:text="${diary.diDate}"></td>
     </tr>
     </tbody>
 </table>
-<a href="/">홈으로</a>
+<br>
+<a class="gothic" href="/diary">글쓰기</a>
+<a class="gothic", href="/menu">◂뒤로가기</a>
 </body>
 </html>

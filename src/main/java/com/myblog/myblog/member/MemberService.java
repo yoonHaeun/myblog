@@ -14,10 +14,10 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    public List<Member> usersList(){
+    public List<Member> memberList(){
         return memberRepository.findAll();
     }
-    public Member currentusers(String id){
+    public Member currentMembers(String id){
         return memberRepository.findAllById(id);
     }
 

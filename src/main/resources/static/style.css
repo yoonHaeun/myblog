@@ -38,10 +38,18 @@ a{
 .gothic:active{
     background-color: #242424;
 }
-label, input{
+label, input, textarea{
     display: inline-block;
 }
 HTML, body{
     margin: 0px; padding: 0px;
     background-color: #343434;
+}
+textarea {
+    border: none;
+    resize: none;
+}
+th.gothic, td.gothic{
+    border-bottom: 1px solid floralwhite;
+    border-radius: 0px 0px 0px 0px;
 }

@@ -1,6 +1,6 @@
 package com.myblog.myblog.member;
 
-import com.myblog.myblog.mydiary.MyDiary;
+import com.myblog.myblog.diary.Diary;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,8 +18,8 @@ public class Member {
     private String id;
     private String password;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<MyDiary> myDiary;
+//    @OneToMany(fetch = FetchType.LAZY)
+//    private List<Diary> Diary;
 
 }
 

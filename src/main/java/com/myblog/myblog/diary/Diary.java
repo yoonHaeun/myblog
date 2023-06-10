@@ -1,4 +1,4 @@
-package com.myblog.myblog.mydiary;
+package com.myblog.myblog.diary;
 
 import com.myblog.myblog.member.Member;
 import lombok.*;
@@ -12,19 +12,19 @@ import java.time.LocalDate;
 @Entity
 @Getter @Setter @EqualsAndHashCode(of = "id")
 @Builder @AllArgsConstructor @NoArgsConstructor
-public class MyDiary {
+public class Diary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long diId;
 
     private String diTitle; // 제목
-    @Column(length = 5000)
+    @Column(length = 10000)
     private String diContext; // 내용
     private LocalDate diDate; // 생성일자
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "member_id")
+//    private Member member;
 
 
 }

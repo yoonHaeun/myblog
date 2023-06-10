@@ -16,34 +16,13 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @GetMapping("/member/{id}")
-    public String member(@PathVariable String id, Model model){
-        Member member = memberService.currentusers(id);
-        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
-        model.addAttribute("users", memberEnrollment);
-        return "user/member";
-    }
-    @GetMapping("/joinForm")
-    public String joinForm(){return "user/joinForm";}
+
+    //로그인 관리
     @GetMapping("/loginForm")
-    public String loginForm(Model model){
-        List<Member> memberList = memberService.usersList();
+    public String loginForm(Model model) {
+        List<Member> memberList = memberService.memberList();
         model.addAttribute("memberList", memberList);
-        return "user/loginForm";
-    }
-    @GetMapping("/users-update/{id}")
-    public String memberUpdate(@PathVariable String id, Model model){
-        Member member = memberService.currentusers(id);
-        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
-        model.addAttribute("users", memberEnrollment);
-        return "user/users-update";
-    }
-
-
-    @PostMapping("/join")
-    public String newUser(@ModelAttribute MemberEnrollment memberEnrollment) {
-        memberService.createUsers(memberEnrollment);
-        return "redirect:/";
+        return "user/login";
     }
 
 //    @PostMapping("/login")
@@ -57,11 +36,46 @@ public class MemberController {
 //    }
 
     @PostMapping("/login")
-    public String login(@ModelAttribute("member") Member member){
-        if(memberService.login(member)){
-            return "redirect:/home/{id}";
-        }
-        return "user/loginForm";
+    public String login(@ModelAttribute("member") Member member) {
+//        if(memberService.login(member)){
+//            return "redirect:/home/{id}";
+//        }
+        return "redirect:/home";
+    }
+
+
+
+
+    //회원가입 관리
+    @PostMapping("/join")
+    public String newUser(@ModelAttribute MemberEnrollment memberEnrollment) {
+        memberService.createUsers(memberEnrollment);
+        return "redirect:/";
+    }
+
+
+    @GetMapping("/joinForm")
+    public String joinForm(){return "user/joinForm";}
+
+
+
+
+
+    //멤버 관리
+    @GetMapping("/member/{id}")
+    public String member(@PathVariable String id, Model model){
+        Member member = memberService.currentMembers(id);
+        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
+        model.addAttribute("users", memberEnrollment);
+        return "member/member";
+    }
+
+    @GetMapping("/users-update/{id}")
+    public String memberUpdate(@PathVariable String id, Model model){
+        Member member = memberService.currentMembers(id);
+        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
+        model.addAttribute("users", memberEnrollment);
+        return "member/member-update";
     }
 
     @PostMapping("/users-update/")
@@ -74,12 +88,5 @@ public class MemberController {
 
 
 
-    @GetMapping("/{id}")
-    public String home(@PathVariable String id, Model model){
-        Member member = memberService.currentusers(id);
-        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
-        model.addAttribute("users", memberEnrollment);
-        return "home";
-    }
 
 }
