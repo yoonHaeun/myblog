@@ -62,11 +62,15 @@ public class MemberController {
 
 
     //멤버 관리
-    @GetMapping("/member/{id}")
-    public String member(@PathVariable String id, Model model){
-        Member member = memberService.currentMembers(id);
-        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
-        model.addAttribute("users", memberEnrollment);
+//    @GetMapping("/member/{id}")
+//    public String member(@PathVariable String id, Model model){
+//        Member member = memberService.currentMembers(id);
+//        MemberEnrollment memberEnrollment = new MemberEnrollment(member.getId(), member.getPassword());
+//        model.addAttribute("users", memberEnrollment);
+//        return "member/member";
+//    }
+    @GetMapping("/member")
+    public String member(){
         return "member/member";
     }
 

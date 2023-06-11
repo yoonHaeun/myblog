@@ -13,4 +13,17 @@ public class MainController {
         return "index";
     }
 
+
+
+    @GetMapping("/home")
+    public String home(){
+        return "main/home";
+    }
+
+    @GetMapping("/menu")
+    public String menuList(){
+        return "main/mainMenu";
+    }
+
+
 }

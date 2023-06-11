@@ -6,20 +6,20 @@
     <title>MyBlog | 마이페이지</title>
 </head>
 <body>
-<table>
-    <tbody>
-    <tr>
-        <th>ID</th>
-        <th>Password</th>
-    </tr>
-    <tr>
-        <td th:text="${member.id}"></td>
-        <td th:text="${member.password}"></td>
-    </tr>
-    </tbody>
-</table>
-<a th:href="@{'/member-update'+${member.id}}">◂정보수정</a>
-<a href="/static">◂로그아웃</a>
-<a th:href="@{'/'+${member.id}}">◂뒤로가기</a>
+<!--<table>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>Password</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td th:text="${member.id}"></td>-->
+<!--        <td th:text="${member.password}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--<a th:href="@{'/member-update'+${member.id}}">◂정보수정</a>-->
+<a class="gothic" href="/">◂로그아웃</a>
+<a class="gothic" href="/home">◂뒤로가기</a>
 </body>
 </html>

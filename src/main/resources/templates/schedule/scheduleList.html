@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css?ver=1" />
-    <title>MyBlog | 일기</title>
+    <title>MyBlog | 일정</title>
 </head>
 <body>
-<h3 class="gothic">일기</h3>
+<h3 class="gothic">일정</h3>
 <br>
 <table style="width: 500px">
     <tbody>
@@ -15,15 +15,15 @@
         <th style="width: 40%" class="gothic">내용</th>
         <th style="width: 30%" class="gothic">날짜</th>
     </tr>
-    <tr th:each="diary: ${diary}">
-        <td class="gothic" th:text="${diary.diTitle}"></td>
-        <td class="gothic" th:text="${diary.diContext}"></td>
-        <td class="gothic" th:text="${diary.diDate}"></td>
+    <tr th:each="schedule: ${schedule}">
+        <td class="gothic" th:text="${schedule.scTitle}"></td>
+        <td class="gothic" th:text="${schedule.scContext}"></td>
+        <td class="gothic" th:text="${schedule.scDate}"></td>
     </tr>
     </tbody>
 </table>
 <br>
-<a class="gothic" href="/diary">글쓰기</a>
+<a class="gothic" href="/schedule">글쓰기</a>
 <a class="gothic", href="/menu">◂뒤로가기</a>
 </body>
 </html>

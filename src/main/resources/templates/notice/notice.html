@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css?ver=1" />
+    <title>MyBlog | 공지</title>
+</head>
+<body>
+<h3 class="gothic">공지</h3>
+<form method="post" action="/newNotice">
+<!--  <label class="gothic" for="diTitle"></label>-->
+  <input class="nanum" type="text" id="noTitle" name="noTitle" placeholder="Title" required/>
+  <br>
+<!--  <label class="gothic" for="diContext"></label>-->
+  <div style="width: 500px;">
+  <textarea class="nanum" style="width: 100%; height: 300px" id="noContext" name = "noContext" placeholder="Context"></textarea>
+  </div>
+    <br>
+  <input class="nanum" type="submit" value="저장하기"/>
+</form>
+<a class="gothic", href="/noticeList">◂뒤로가기</a>
+</body>
+</html>
